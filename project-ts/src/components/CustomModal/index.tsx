@@ -10,7 +10,7 @@ interface PropsModal {
 }
 
 export function CustomModal(props: PropsModal){
-    const { createRota, editarRota, funsetRotasDefault, updateRota } = useContext(RotaContext);
+    const { createRota, editarRota, funSetRotasDefault, updateRota } = useContext(RotaContext);
     const [nome, setNome] = useState('')
     const [rotaInicial, setRotaInicial] = useState ('')
     const [rotaFinal, setRotaFinal] = useState ('')
@@ -26,7 +26,7 @@ export function CustomModal(props: PropsModal){
 
     },[editarRota.editar])
     function limparCamposEFecharModal() {
-        funsetRotasDefault();
+        funSetRotasDefault();
         setNome('')
         setRotaInicial('')
         setRotaFinal('')
@@ -51,8 +51,8 @@ export function CustomModal(props: PropsModal){
 
         } else {
             createRota({
-                nome,
-                rotaInicial,
+                nome : nome,
+                rotaInicial : rotaInicial,
                 rotaFinal,
                 preco
             })

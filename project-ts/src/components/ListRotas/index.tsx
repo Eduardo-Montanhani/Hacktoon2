@@ -16,7 +16,7 @@ export function ListTarefas(props: PropsListTarefas) {
     return (
         <>
             <Container>
-                <div className='quadro'>
+                <div>
                 <h3>
                         Rotas Cadastradas
                     </h3>
