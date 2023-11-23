@@ -116,7 +116,7 @@ export function CustomModal(props: PropsModal){
                 />
 
                 <input
-                    type="text"
+                    type="time"
                     placeholder='Horário'
                     required
                     value={horario}
@@ -124,7 +124,7 @@ export function CustomModal(props: PropsModal){
 
                 />
                 <input
-                    type="text"
+                    type="number"
                     placeholder='Valor da Passagem'
                     required
                     value={preco}

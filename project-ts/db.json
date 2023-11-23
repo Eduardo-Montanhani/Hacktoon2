@@ -1,12 +1,3 @@
 {
-  "rotas": [
-    {
-      "nome": "Maria Helena - Maringá",
-      "rotaInicial": "Maria Helena",
-      "rotaFinal": "Maringá",
-      "horario": "10:00",
-      "preco": "50,00",
-      "id": 1
-    }
-  ]
+  "rotas": []
 }
