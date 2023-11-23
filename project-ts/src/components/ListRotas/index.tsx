@@ -30,13 +30,15 @@ export function ListTarefas(props: PropsListTarefas) {
                                 >
                                     <div>
                                         <h4>
-                                           Nome Da Rota: {rota.nome}
+                                           Rota: {rota.nome}
                                         </h4>
-                                        <p>Rota Inicial: {rota.rotaInicial}</p>
-                                        <p>Rota Final: {rota.rotaFinal}</p>
-                                        <p>Valor da Passagem: {rota.preco}</p>
+                                        <p>Origem: {rota.rotaInicial}</p>
+                                        <p>Destino: {rota.rotaFinal}</p>
+                                        <p>Horário: {rota.horario}</p>
+                                        <p>Valor: {rota.preco}</p>
                                     </div>
                                     <div>
+
                                         <button type='button'
                                             onClick={() => {
                                                 //o editar é para ajuste tecnico

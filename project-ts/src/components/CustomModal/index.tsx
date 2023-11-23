@@ -14,6 +14,7 @@ export function CustomModal(props: PropsModal){
     const [nome, setNome] = useState('')
     const [rotaInicial, setRotaInicial] = useState ('')
     const [rotaFinal, setRotaFinal] = useState ('')
+    const [horario, setHorario] = useState ('')
     const [preco, setPreco] = useState ('')
 
     useEffect(() => {
@@ -21,6 +22,7 @@ export function CustomModal(props: PropsModal){
             setNome(editarRota.rota?.nome ? editarRota.rota.nome : '')
             setRotaInicial(editarRota.rota?.rotaInicial ? editarRota.rota.rotaInicial : '')
             setRotaFinal(editarRota.rota?.rotaFinal? editarRota.rota.rotaFinal: '')
+            setHorario(editarRota.rota?.horario? editarRota.rota.horario: '')
             setPreco(editarRota.rota?.preco ? editarRota.rota.preco : '')
         }
 
@@ -30,6 +32,7 @@ export function CustomModal(props: PropsModal){
         setNome('')
         setRotaInicial('')
         setRotaFinal('')
+        setHorario('')
         setPreco('')
         props.fecharModal()
     }
@@ -44,6 +47,7 @@ export function CustomModal(props: PropsModal){
                 nome,
                 rotaInicial,
                 rotaFinal,
+                horario,
                 preco
 
             }
@@ -54,6 +58,7 @@ export function CustomModal(props: PropsModal){
                 nome : nome,
                 rotaInicial : rotaInicial,
                 rotaFinal,
+                horario,
                 preco
             })
         }
@@ -87,7 +92,7 @@ export function CustomModal(props: PropsModal){
 
                 <input
                     type="text"
-                    placeholder='Nome Da Rota'
+                    placeholder='Origem - Destino'
                     required
                     value={nome}
                     onChange={(event) => setNome(event.target.value)}
@@ -95,7 +100,7 @@ export function CustomModal(props: PropsModal){
                 />
                 <input
                     type="text"
-                    placeholder='Rota Inicial'
+                    placeholder='Origem'
                     required
                     value={rotaInicial}
                     onChange={(event) => setRotaInicial(event.target.value)}
@@ -103,10 +108,19 @@ export function CustomModal(props: PropsModal){
                 />
                 <input
                     type="text"
-                    placeholder='Rota Final'
+                    placeholder='Destino'
                     required
                     value={rotaFinal}
                     onChange={(event) => setRotaFinal(event.target.value)}
+
+                />
+
+                <input
+                    type="text"
+                    placeholder='Horário'
+                    required
+                    value={horario}
+                    onChange={(event) => setHorario(event.target.value)}
 
                 />
                 <input
