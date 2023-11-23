@@ -63,7 +63,7 @@ export function RotasProvider({children}: PropsRotaProvider) {
     async function createRota(data: Rotas){
         setLoading(true)
         await axios.post('http://localhost:3000/rotas', data);
-        axios.get('http://localhost:3000/posts')
+        axios.get('http://localhost:3000/rotas')
         .then((res) =>{
             setRotas(res.data);
             setLoading(false)
