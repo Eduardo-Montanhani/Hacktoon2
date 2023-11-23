@@ -1,45 +1,35 @@
 import { useState } from 'react'
-import Modal from 'react-modal'
-import { Header } from "./components/Header"
-import { ListTarefas } from './components/ListRotas'
-import { GlobalStyle } from './styles/global'
-import { CustomModal } from './components/CustomModal'
-import { RotasProvider } from './contexts/rotaContext'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
-Modal.setAppElement('#root')
-
-// dontpad.com/profchines
 function App() {
+  const [count, setCount] = useState(0)
 
-    const [isVisibleModal, setIsVisibleModal] = useState(false)
-
-    function abrirModal() {
-        setIsVisibleModal(true)
-    }
-
-    function fecharModal() {
-        setIsVisibleModal(false)
-    }
-
-    return (
-        <>
-            <RotasProvider>
-            <GlobalStyle />
-                <Header
-                    abrirModal={abrirModal}
-                />
-
-                <ListTarefas
-                 abrirModal={abrirModal}
-                />
-
-                <CustomModal
-                    modalVisible={isVisibleModal}
-                    fecharModal={fecharModal}
-                />
-            </RotasProvider>
-        </>
-    )
+  return (
+    <>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
 export default App
