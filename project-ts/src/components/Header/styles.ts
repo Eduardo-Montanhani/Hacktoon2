@@ -3,17 +3,17 @@ import styled from 'styled-components'
 export const Container = styled.header`
     background-color: var(--blue);
     padding: 1rem 1rem 1rem;
-    display: flex;
+    border: 20px;
     align-items: center;
     justify-content: space-between;
 
     h1 {
-        color: #fff;
+        color: #f69a0b;
     }
 
     button {
         font-size: 1rem;
-        color: #fff;
+        color: #fbe4ae;
         background-color: var(--blue-light);
         border: 0;
         padding: 0 2rem;
@@ -25,7 +25,7 @@ export const Container = styled.header`
 
         &:hover {
             /* filter: brightness(0.9); */
-            background-color: #f00;
+            background-color: #e4b302;
         }
 
     }

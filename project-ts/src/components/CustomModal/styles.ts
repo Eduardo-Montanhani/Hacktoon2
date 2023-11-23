@@ -39,8 +39,8 @@ export const FormContainer = styled.form`
         width: 100%;
         padding: 0 1.5rem;
         height: 4rem;
-        background-color: #03bb85;
-        color: #fff;
+        background-color: #1d1016;
+        color: #ff0f35;
         border-radius: 8px;
         border: 0;
         font-size: 1rem;
