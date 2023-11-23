@@ -53,7 +53,7 @@ export function RotasProvider({children}: PropsRotaProvider) {
     const [loading, setLoading] = useState<boolean>(false)
 
     useEffect(() => {
-        axios.get('http://localhost:3000/posts')
+        axios.get('http://localhost:3000/rotas')
         .then((res) => {
             setRotas(res.data)
         })
@@ -62,7 +62,7 @@ export function RotasProvider({children}: PropsRotaProvider) {
 
     async function createRota(data: Rotas){
         setLoading(true)
-        await axios.post('http://localhost:3000/posts', data);
+        await axios.post('http://localhost:3000/rotas', data);
         axios.get('http://localhost:3000/posts')
         .then((res) =>{
             setRotas(res.data);
@@ -71,8 +71,8 @@ export function RotasProvider({children}: PropsRotaProvider) {
     }
     async function updateRota(data: RotasComID) {
         setLoading(true)
-        await axios.put(`http://localhost:3000/posts/${data.id}`, data);
-        axios.get('http://localhost:3000/posts')
+        await axios.put(`http://localhost:3000/rotas/${data.id}`, data);
+        axios.get('http://localhost:3000/rotas')
         .then((res) => {
             setRotas(res.data);
             setLoading(false)
@@ -86,8 +86,8 @@ export function RotasProvider({children}: PropsRotaProvider) {
     }
     async function deleteRota(data: RotasComID) {
         setLoading(true)
-        await axios.delete(`http://localhost:3000/posts/${data.id}`);
-        axios.get('http://localhost:3000/posts')
+        await axios.delete(`http://localhost:3000/rotas/${data.id}`);
+        axios.get('http://localhost:3000/rotas')
         .then((res)=> {
             setRotas(res.data);
             setLoading(false)
