@@ -38,6 +38,7 @@ export function ListTarefas(props: PropsListTarefas) {
                                         <p>Valor: {rota.preco}</p>
                                     </div>
                                     <div>
+
                                         <button type='button'
                                             onClick={() => {
                                                 //o editar é para ajuste tecnico
