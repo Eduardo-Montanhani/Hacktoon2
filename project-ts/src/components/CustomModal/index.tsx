@@ -2,7 +2,7 @@
 import { FormEvent, useContext, useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import { FormContainer } from './styles'
-import { TarefaContext } from '../../contexts/tarefaContext';
+import { RotaContext } from '../../contexts/rotaContext'
 
 interface PropsModal {
     modalVisible: boolean;
@@ -10,7 +10,7 @@ interface PropsModal {
 }
 
 export function CustomModal(props: PropsModal){
-    const { createRota, editarRota, funSetRotasDefault, updateRota } = useContext(TarefaContext);
+    const { createRota, editarRota, funsetRotasDefault, updateRota } = useContext(RotaContext);
     const [nome, setNome] = useState('')
     const [rotaInicial, setRotaInicial] = useState ('')
     const [rotaFinal, setRotaFinal] = useState ('')
@@ -26,7 +26,7 @@ export function CustomModal(props: PropsModal){
 
     },[editarRota.editar])
     function limparCamposEFecharModal() {
-        funSetRotasDefault();
+        funsetRotasDefault();
         setNome('')
         setRotaInicial('')
         setRotaFinal('')
@@ -107,6 +107,14 @@ export function CustomModal(props: PropsModal){
                     required
                     value={rotaFinal}
                     onChange={(event) => setRotaFinal(event.target.value)}
+
+                />
+                <input
+                    type="text"
+                    placeholder='Valor da Passagem'
+                    required
+                    value={preco}
+                    onChange={(event) => setPreco(event.target.value)}
 
                 />
 

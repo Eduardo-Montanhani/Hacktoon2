@@ -1,7 +1,6 @@
 import { useContext } from 'react'
 import { Container } from "./styles";
-import { TarefaContext } from '../../contexts/tarefaContext';
-
+import { RotaContext } from '../../contexts/rotaContext';
 
 //para realizar a tipagem
 interface PropsListTarefas {
@@ -10,7 +9,7 @@ interface PropsListTarefas {
 
 export function ListTarefas(props: PropsListTarefas) {
     //chamou o funEditarTarefa do Context
-    const { rotas, funEditarRota, deleteRota} = useContext(TarefaContext)
+    const { rotas, funEditarRota, deleteRota} = useContext(RotaContext)
 
 
 
