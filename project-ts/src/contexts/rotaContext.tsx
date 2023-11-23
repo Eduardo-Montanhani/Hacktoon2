@@ -13,6 +13,7 @@ interface Rotas {
     nome: string;
     rotaInicial: string;
     rotaFinal: string;
+    horario: string;
     preco: string;
 }
 
@@ -21,6 +22,7 @@ interface RotasComID {
     nome: string;
     rotaInicial: string;
     rotaFinal: string;
+    horario: string;
     preco: string;
 }
 
