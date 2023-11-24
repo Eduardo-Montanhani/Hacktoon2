@@ -14,7 +14,7 @@ interface Rotas {
     rotaInicial: string;
     rotaFinal: string;
     horario: string;
-    preco: string;
+    preco: number;
 }
 
 interface RotasComID {
@@ -23,7 +23,7 @@ interface RotasComID {
     rotaInicial: string;
     rotaFinal: string;
     horario: string;
-    preco: string;
+    preco: number;
 }
 
 interface DataEditarRota {
@@ -60,6 +60,7 @@ export function RotasProvider({children}: PropsRotaProvider) {
             setRotas(res.data)
         })
     }, [])
+
 
 
     async function createRota(data: Rotas){

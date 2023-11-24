@@ -18,7 +18,9 @@ export const Container = styled.header`
         color: #fff;
         background-color: var(--blue-light);
         border: 2px;
-        padding: 0 1rem;
+        padding: 0 3rem;
+        margin: 2px;
+
 
         border-radius: 8px;
         height: 3rem;

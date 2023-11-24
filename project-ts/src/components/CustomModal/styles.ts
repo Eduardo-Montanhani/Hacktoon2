@@ -15,6 +15,7 @@ export const FormContainer = styled.form`
         border: 1px solid #d7d7d7;
         background-color: #e7e9ee;
         font-size: 1rem;
+        margin:2px;
 
         &::placeholder {
             color: var(--text-body);

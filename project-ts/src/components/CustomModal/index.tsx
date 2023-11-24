@@ -15,7 +15,9 @@ export function CustomModal(props: PropsModal){
     const [rotaInicial, setRotaInicial] = useState ('')
     const [rotaFinal, setRotaFinal] = useState ('')
     const [horario, setHorario] = useState ('')
-    const [preco, setPreco] = useState ('')
+    const [preco, setPreco] = useState (0)
+    const [erro, setErro] = useState('');
+
 
     useEffect(() => {
         if(editarRota.editar){
@@ -23,7 +25,7 @@ export function CustomModal(props: PropsModal){
             setRotaInicial(editarRota.rota?.rotaInicial ? editarRota.rota.rotaInicial : '')
             setRotaFinal(editarRota.rota?.rotaFinal? editarRota.rota.rotaFinal: '')
             setHorario(editarRota.rota?.horario? editarRota.rota.horario: '')
-            setPreco(editarRota.rota?.preco ? editarRota.rota.preco : '')
+            setPreco(editarRota.rota?.preco ? editarRota.rota.preco : 0)
         }
 
     },[editarRota.editar])
@@ -33,13 +35,19 @@ export function CustomModal(props: PropsModal){
         setRotaInicial('')
         setRotaFinal('')
         setHorario('')
-        setPreco('')
+        setPreco(0)
         props.fecharModal()
     }
     //poderia ser OnsubmitModal
     function criarRota(event: FormEvent) {
         event.preventDefault()
 
+        if (preco < 0) {
+            setErro('O valor da passagem deve ser um número não negativo.');
+            return;
+        } else {
+            setErro('');
+        }
 
         if (editarRota.editar && editarRota.rota) {
             let objRota = {
@@ -90,6 +98,8 @@ export function CustomModal(props: PropsModal){
             >
                 <h2>CADASTRAMENTO DE ROTAS</h2>
 
+                {erro && <p className="erro">{erro}</p>}
+
                 <input
                     type="text"
                     placeholder='Origem - Destino'
@@ -128,7 +138,7 @@ export function CustomModal(props: PropsModal){
                     placeholder='Valor da Passagem'
                     required
                     value={preco}
-                    onChange={(event) => setPreco(event.target.value)}
+                    onChange={(event) => setPreco(parseFloat(event.target.value))}
 
                 />
 

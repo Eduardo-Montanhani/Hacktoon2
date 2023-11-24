@@ -1,11 +1,11 @@
 {
   "rotas": [
     {
-      "nome": "3326",
+      "nome": "GG",
       "rotaInicial": "Altonia",
       "rotaFinal": "umuarama",
-      "horario": "12:30",
-      "preco": "15.00",
+      "horario": "15:30",
+      "preco": 4,
       "id": 1
     }
   ],

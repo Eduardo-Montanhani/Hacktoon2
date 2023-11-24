@@ -16,8 +16,6 @@ export const Header = (props: PropsHeader) => {
                 >
                     Nova Rota
                 </button>
-            </div>
-            <div>
                 <button
                     type="button"
                     onClick={props.abrirUser}
@@ -25,6 +23,7 @@ export const Header = (props: PropsHeader) => {
                         Cadastro Usuario
                     </button>
             </div>
+
         </Container>
     )
 }
