@@ -7,14 +7,13 @@ interface PropsHeader {
 export const Header = (props: PropsHeader) => {
     return(
         <Container>
-            <h1>SI BUS</h1>
+            <img src="/logobus.png" alt="logo" />
             <div>
                 <button
                     type="button"
                     onClick={props.abrirModal}
-
                 >
-                    Adicionar Novas Rotas
+                    Nova Rota
                 </button>
             </div>
         </Container>

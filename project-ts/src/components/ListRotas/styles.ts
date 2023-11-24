@@ -33,9 +33,23 @@ export const Container = styled.div`
             justify-content: space-between;
 
         }
-        button{
+
+        button {
+            margin: 5px;
+        }
+
+        .btn-editar{
+            background-color: yellow;
+            padding: 3px;
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .btn-delete{
             background-color: red;
-            border-radius: 8px;
+            padding: 3px;
+            border: 1px solid;
+            border-radius: 10px;
         }
     }
 `
