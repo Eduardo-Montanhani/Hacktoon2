@@ -5,6 +5,8 @@ import { ListTarefas } from './components/ListRotas'
 import { GlobalStyle } from './styles/global'
 import { CustomModal } from './components/CustomModal'
 import { RotasProvider } from './contexts/rotaContext'
+import { CustomUser } from './components/CustomUser'
+import { UsersProvider } from './contexts/userContext'
 
 Modal.setAppElement('#root')
 
@@ -12,6 +14,8 @@ Modal.setAppElement('#root')
 function App() {
 
     const [isVisibleModal, setIsVisibleModal] = useState(false)
+    const [isVisibleUser, setIsVisibleUser] = useState(false)
+
 
     function abrirModal() {
         setIsVisibleModal(true)
@@ -20,6 +24,13 @@ function App() {
     function fecharModal() {
         setIsVisibleModal(false)
     }
+    function abrirUser() {
+        setIsVisibleUser(true)
+    }
+
+    function fecharUser() {
+        setIsVisibleUser(false)
+    }
 
     return (
         <>
@@ -27,6 +38,7 @@ function App() {
             <GlobalStyle />
                 <Header
                     abrirModal={abrirModal}
+                    abrirUser={abrirUser}
                 />
 
                 <ListTarefas
@@ -38,6 +50,14 @@ function App() {
                     fecharModal={fecharModal}
                 />
             </RotasProvider>
+
+            <UsersProvider>
+            <CustomUser
+                    UserVisible={isVisibleUser}
+                    fecharUser={fecharUser}
+
+                />
+            </UsersProvider>
         </>
     )
 }

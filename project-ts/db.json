@@ -1,19 +1,14 @@
 {
-  "rotas": [
+  "rotas": [],
+  "usuario": [
     {
-      "nome": "Rota 1",
-      "rotaInicial": "Umuarama",
-      "rotaFinal": "Guarulho",
-      "horario": "12:00",
-      "preco": "150.00",
+      "nome": "wes",
+      "senha": "1234",
       "id": 1
     },
     {
-      "nome": "Rota 2",
-      "rotaInicial": "Londrina",
-      "rotaFinal": "Umuarama",
-      "horario": "08:00",
-      "preco": "65.00",
+      "nome": "monica",
+      "senha": "1234566",
       "id": 2
     }
   ]

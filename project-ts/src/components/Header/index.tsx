@@ -2,6 +2,7 @@ import { Container } from "./styles"
 
 interface PropsHeader {
     abrirModal: () => void;
+    abrirUser: () => void;
 }
 
 export const Header = (props: PropsHeader) => {
@@ -15,6 +16,14 @@ export const Header = (props: PropsHeader) => {
                 >
                     Nova Rota
                 </button>
+            </div>
+            <div>
+                <button
+                    type="button"
+                    onClick={props.abrirUser}
+                    >
+                        Cadastro Usuario
+                    </button>
             </div>
         </Container>
     )
