@@ -34,7 +34,7 @@ export function ListTarefas(props: PropsListTarefas) {
                                                 </h4>
                                                 <p>Origem: {rota.rotaInicial}</p>
                                                 <p>Destino: {rota.rotaFinal}</p>
-                                                <p>Horário: {rota.horario}</p>
+                                                <p>Horário Saída: {rota.horario}</p>
                                                 <p>Valor: {rota.preco}</p>
                                             </div>
                                             <div>
