@@ -4,8 +4,10 @@ export const Container = styled.header`
     background-color: var(--blue);
     padding: 1rem 1rem 1rem;
     border: 20px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0px 4px 15px -3px rgba(1, 77, 99);
 
     h1 {
         color: #f69a0b;
@@ -13,10 +15,10 @@ export const Container = styled.header`
 
     button {
         font-size: 1rem;
-        color: #fbe4ae;
+        color: #fff;
         background-color: var(--blue-light);
-        border: 0;
-        padding: 0 2rem;
+        border: 2px;
+        padding: 0 1rem;
 
         border-radius: 8px;
         height: 3rem;
@@ -24,9 +26,17 @@ export const Container = styled.header`
         transition: 1s;
 
         &:hover {
-            /* filter: brightness(0.9); */
-            background-color: #e4b302;
+            background-color: #037fa3;
+            border: 2px solid;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
         }
 
     }
-`
+
+    img {
+        max-width:200px;
+        max-height:100px;
+        width: auto;
+        height: auto;
+    }
+    `

@@ -1,3 +1,20 @@
 {
-  "rotas": []
+  "rotas": [
+    {
+      "nome": "Rota 1",
+      "rotaInicial": "Umuarama",
+      "rotaFinal": "Guarulho",
+      "horario": "12:00",
+      "preco": "150.00",
+      "id": 1
+    },
+    {
+      "nome": "Rota 2",
+      "rotaInicial": "Londrina",
+      "rotaFinal": "Umuarama",
+      "horario": "08:00",
+      "preco": "65.00",
+      "id": 2
+    }
+  ]
 }
