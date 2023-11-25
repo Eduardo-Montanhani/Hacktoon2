@@ -96,7 +96,7 @@ export function CustomModal(props: PropsModal){
             <FormContainer
                 onSubmit={criarRota}
             >
-                <h2>CADASTRAMENTO DE ROTAS</h2>
+                <h2>CADASTRO DE ROTAS</h2>
 
                 {erro && <p className="erro">{erro}</p>}
 
@@ -143,7 +143,7 @@ export function CustomModal(props: PropsModal){
                 />
 
                 <button type='submit'>
-                    Cadastrar Informações
+                    <strong>Cadastrar Informações</strong>
                 </button>
             </FormContainer>
 

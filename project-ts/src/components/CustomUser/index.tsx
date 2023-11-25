@@ -54,7 +54,7 @@ export function CustomUser(props: PropsUser){
             <FormContainer
                 onSubmit={criarUser}
             >
-                <h2>CADASTRAMENTO DE Usuarios</h2>
+                <h2>CADASTRO DE USUARIOS</h2>
 
                 <input
                     type="text"
@@ -75,7 +75,7 @@ export function CustomUser(props: PropsUser){
 
 
                 <button type='submit'>
-                    Cadastrar Informações
+                    <strong>Cadastrar Informações</strong>
                 </button>
             </FormContainer>
 

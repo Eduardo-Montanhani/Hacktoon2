@@ -6,6 +6,7 @@ export const FormContainer = styled.form`
         color: var(--blue);
         font-size: 1.5rem;
         margin-bottom: 2rem;
+        text-align: center;
     }
 
     input {
@@ -40,8 +41,8 @@ export const FormContainer = styled.form`
         width: 100%;
         padding: 0 1.5rem;
         height: 4rem;
-        background-color: #1d1016;
-        color: #ff0f35;
+        background-color: var(--blue);
+        color: #fff;
         border-radius: 8px;
         border: 0;
         font-size: 1rem;
