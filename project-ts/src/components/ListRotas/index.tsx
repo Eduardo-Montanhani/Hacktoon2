@@ -1,6 +1,8 @@
 import { useContext } from 'react'
 import { Container } from "./styles";
 import { RotaContext } from '../../contexts/rotaContext';
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 //para realizar a tipagem
 interface PropsListTarefas {
@@ -32,10 +34,10 @@ export function ListTarefas(props: PropsListTarefas) {
                                                 <h4>
                                                     Rota: {rota.nome}
                                                 </h4>
-                                                <p>Origem: {rota.rotaInicial}</p>
-                                                <p>Destino: {rota.rotaFinal}</p>
-                                                <p>Horário Saída: {rota.horario}</p>
-                                                <p>Valor: {rota.preco}</p>
+                                                <p><b>Origem:</b> {rota.rotaInicial}</p>
+                                                <p><b>Destino:</b> {rota.rotaFinal}</p>
+                                                <p><b>Horário Saída:</b> {rota.horario}</p>
+                                                <p><b>Valor:</b> {rota.preco}</p>
                                             </div>
                                             <div>
 
@@ -46,14 +48,14 @@ export function ListTarefas(props: PropsListTarefas) {
                                                         props.abrirModal();
                                                     }}
                                                 >
-                                                    Editar
+                                                    <FaEdit size={20}/>
                                                 </button>
                                                 <button type='button' className='btn-delete'
                                                     onClick={() => {
                                                         deleteRota(rota)
                                                     }}
                                                 >
-                                                    Deletar
+                                                    <MdDelete size={20}/>
                                                 </button>
                                             </div>
                                         </li>
