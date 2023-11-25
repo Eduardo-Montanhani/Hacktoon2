@@ -35,10 +35,22 @@ export const Container = styled.header`
 
     }
 
+
     img {
         max-width:200px;
         max-height:100px;
         width: auto;
         height: auto;
-    }
+
+  animation: go-back 1s infinite alternate;
+}
+
+@keyframes go-back {
+  from {
+    transform: translateX(100px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
     `
