@@ -8,6 +8,14 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
 
+    h3 {
+        text-align: center;
+        font-size: 25px;
+        font-weight: 700;
+        color: var(--blue-light);
+        margin: 0 0 25px 0;
+    }
+    
     ul {
         width: 30rem;
         border-radius: 8px;
@@ -15,9 +23,16 @@ export const Container = styled.div`
         border: 2px solid #d7d7d7;
         background-color: #ebecf0;
 
-        h3 {
-            text-align: center;
-            color: #172b4d;
+
+        h4 {
+            margin-bottom: 10px;
+            color: var(--blue-light);
+            font-size: 20px;
+            font-weight: 750;
+        }
+
+        p {
+            margin: 0 0 8px 0;
         }
 
         li {
@@ -39,17 +54,27 @@ export const Container = styled.div`
         }
 
         .btn-editar{
-            background-color: yellow;
             padding: 3px;
-            border: 1px solid;
-            border-radius: 10px;
+            border: 0;
+            background-color: #fff;
         }
 
         .btn-delete{
-            background-color: red;
             padding: 3px;
-            border: 1px solid;
-            border-radius: 10px;
+            border: 0;
+            background-color: #fff;
+        }
+
+        .btn-editar:hover{
+            background-color: #b5b3b3;
+            transition: 1s;
+            border-radius: 3px;
+        }
+
+        .btn-delete:hover{
+            background-color: #b5b3b3;
+            transition: 1s;
+            border-radius: 3px;
         }
     }
 `
