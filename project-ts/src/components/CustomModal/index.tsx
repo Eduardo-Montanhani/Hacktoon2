@@ -10,26 +10,26 @@ interface PropsModal {
     fecharModal: () => void;
 }
 
-export function CustomModal(props: PropsModal){
+export function CustomModal(props: PropsModal) {
     const { createRota, editarRota, funSetRotasDefault, updateRota } = useContext(RotaContext);
     const [nome, setNome] = useState('')
-    const [rotaInicial, setRotaInicial] = useState ('')
-    const [rotaFinal, setRotaFinal] = useState ('')
-    const [horario, setHorario] = useState ('')
-    const [preco, setPreco] = useState ('')
+    const [rotaInicial, setRotaInicial] = useState('')
+    const [rotaFinal, setRotaFinal] = useState('')
+    const [horario, setHorario] = useState('')
+    const [preco, setPreco] = useState('')
     const [erro, setErro] = useState('');
 
 
     useEffect(() => {
-        if(editarRota.editar){
+        if (editarRota.editar) {
             setNome(editarRota.rota?.nome ? editarRota.rota.nome : '')
             setRotaInicial(editarRota.rota?.rotaInicial ? editarRota.rota.rotaInicial : '')
-            setRotaFinal(editarRota.rota?.rotaFinal? editarRota.rota.rotaFinal: '')
-            setHorario(editarRota.rota?.horario? editarRota.rota.horario: '')
+            setRotaFinal(editarRota.rota?.rotaFinal ? editarRota.rota.rotaFinal : '')
+            setHorario(editarRota.rota?.horario ? editarRota.rota.horario : '')
             setPreco(editarRota.rota?.preco ? editarRota.rota.preco : '')
         }
 
-    },[editarRota.editar])
+    }, [editarRota.editar])
     function limparCamposEFecharModal() {
         funSetRotasDefault();
         setNome('')
@@ -44,7 +44,7 @@ export function CustomModal(props: PropsModal){
     function criarRota(event: FormEvent) {
         event.preventDefault()
 
-        if (preco < '0') {
+        if (preco <= '0') {
             setErro('O valor da passagem deve ser um número positivo');
             return;
         } else {
@@ -65,8 +65,8 @@ export function CustomModal(props: PropsModal){
 
         } else {
             createRota({
-                nome : nome,
-                rotaInicial : rotaInicial,
+                nome: nome,
+                rotaInicial: rotaInicial,
                 rotaFinal,
                 horario,
                 preco
@@ -135,13 +135,14 @@ export function CustomModal(props: PropsModal){
                     onChange={(event) => setHorario(event.target.value)}
 
                 />
-                <input
+
+              <input
+
                     type="number"
                     placeholder='Valor da Passagem'
                     required
                     value={preco}
                     onChange={(event) => setPreco((event.target.value))}
-
 
                 />
 
