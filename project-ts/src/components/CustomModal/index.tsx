@@ -3,6 +3,7 @@ import { FormEvent, useContext, useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import { FormContainer } from './styles'
 import { RotaContext } from '../../contexts/rotaContext'
+import NumberFormat from 'react-number-format';
 
 interface PropsModal {
     modalVisible: boolean;
@@ -15,7 +16,7 @@ export function CustomModal(props: PropsModal){
     const [rotaInicial, setRotaInicial] = useState ('')
     const [rotaFinal, setRotaFinal] = useState ('')
     const [horario, setHorario] = useState ('')
-    const [preco, setPreco] = useState (0)
+    const [preco, setPreco] = useState ('')
     const [erro, setErro] = useState('');
 
 
@@ -25,7 +26,7 @@ export function CustomModal(props: PropsModal){
             setRotaInicial(editarRota.rota?.rotaInicial ? editarRota.rota.rotaInicial : '')
             setRotaFinal(editarRota.rota?.rotaFinal? editarRota.rota.rotaFinal: '')
             setHorario(editarRota.rota?.horario? editarRota.rota.horario: '')
-            setPreco(editarRota.rota?.preco ? editarRota.rota.preco : 0)
+            setPreco(editarRota.rota?.preco ? editarRota.rota.preco : '')
         }
 
     },[editarRota.editar])
@@ -35,15 +36,16 @@ export function CustomModal(props: PropsModal){
         setRotaInicial('')
         setRotaFinal('')
         setHorario('')
-        setPreco(0)
+        setPreco('')
         props.fecharModal()
     }
+
     //poderia ser OnsubmitModal
     function criarRota(event: FormEvent) {
         event.preventDefault()
 
-        if (preco < 0) {
-            setErro('O valor da passagem deve ser um número não negativo.');
+        if (preco < '0') {
+            setErro('O valor da passagem deve ser um número positivo');
             return;
         } else {
             setErro('');
@@ -138,7 +140,8 @@ export function CustomModal(props: PropsModal){
                     placeholder='Valor da Passagem'
                     required
                     value={preco}
-                    onChange={(event) => setPreco(parseFloat(event.target.value))}
+                    onChange={(event) => setPreco((event.target.value))}
+
 
                 />
 

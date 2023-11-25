@@ -14,7 +14,7 @@ interface Rotas {
     rotaInicial: string;
     rotaFinal: string;
     horario: string;
-    preco: number;
+    preco: string;
 }
 
 interface RotasComID {
@@ -23,7 +23,7 @@ interface RotasComID {
     rotaInicial: string;
     rotaFinal: string;
     horario: string;
-    preco: number;
+    preco: string;
 }
 
 interface DataEditarRota {

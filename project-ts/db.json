@@ -1,27 +1,6 @@
 {
-  "rotas": [
-    {
-      "nome": "GG",
-      "rotaInicial": "Altonia",
-      "rotaFinal": "umuarama",
-      "horario": "15:30",
-      "preco": 4,
-      "id": 1
-    },
-    {
-      "nome": "Rota 22",
-      "rotaInicial": "Umuarama",
-      "rotaFinal": "Maria Helena",
-      "horario": "20:10",
-      "preco": 10,
-      "id": 2
-    }
-  ],
+  "rotas": [],
   "usuario": [
-    {
-      "nome": "Allan",
-      "senha": "1234",
-      "id": 1
-    }
+
   ]
 }
