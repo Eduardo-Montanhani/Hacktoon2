@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useState } from 'react'
+import { FormEvent, useContext,useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import { FormContainer } from './styles'
 import { UserContext } from '../../contexts/userContext'
@@ -9,24 +9,43 @@ interface PropsUser{
 }
 
 export function CustomUser(props: PropsUser){
-    const { createUsers} = useContext(UserContext);
+    const { createUsers, editarUser, funSetUserDefault, updateUser} = useContext(UserContext);
     const [nome, setNome] = useState('')
     const [senha, setSenha] = useState('')
 
+    useEffect(() => {
+        if (editarUser.editar) {
+            setNome(editarUser.user?.nome ? editarUser.user.nome : '')
+            setSenha(editarUser.user?.senha? editarUser.user.senha : '')
+
+        }
+
+    }, [editarUser.editar])
     function limparCamposEFecharModal() {
+        funSetUserDefault();
         setNome('')
         setSenha('')
         props.fecharUser()
     }
+
     //poderia ser OnsubmitModal
     function criarUser(event: FormEvent) {
         event.preventDefault()
 
-            createUsers({
-                nome : nome,
-                senha
-            })
+            if (editarUser.editar && editarUser.user) {
+                let objUser = {
+                    ...editarUser.user,
+                    nome,
+                    senha
 
+                }
+                updateUser(objUser)
+            }else {
+                createUsers({
+                    nome: nome,
+                    senha: senha
+                })
+            }
 
 
 

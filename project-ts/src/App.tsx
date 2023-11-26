@@ -7,6 +7,7 @@ import { CustomModal } from './components/CustomModal'
 import { RotasProvider } from './contexts/rotaContext'
 import { CustomUser } from './components/CustomUser'
 import { UsersProvider } from './contexts/userContext'
+import { ListUser } from './components/ListUser'
 
 Modal.setAppElement('#root')
 
@@ -45,6 +46,7 @@ function App() {
                  abrirModal={abrirModal}
                 />
 
+
                 <CustomModal
                     modalVisible={isVisibleModal}
                     fecharModal={fecharModal}
@@ -52,6 +54,9 @@ function App() {
             </RotasProvider>
 
             <UsersProvider>
+            <ListUser
+                abrirUser={abrirUser}
+                />
             <CustomUser
                     UserVisible={isVisibleUser}
                     fecharUser={fecharUser}

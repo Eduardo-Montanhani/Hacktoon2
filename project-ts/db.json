@@ -1,11 +1,19 @@
 {
-  "rotas": [],
+  "rotas": [
+    {
+      "nome": "1212",
+      "rotaInicial": "2121",
+      "rotaFinal": "121",
+      "horario": "12:21",
+      "preco": "22",
+      "id": 1
+    }
+  ],
   "usuario": [
     {
       "nome": "eduardo",
       "senha": "12345",
       "id": 1
     }
-  ],
-  "compra": []
+  ]
 }
