@@ -1,6 +1,11 @@
 {
   "rotas": [],
   "usuario": [
-
-  ]
+    {
+      "nome": "eduardo",
+      "senha": "12345",
+      "id": 1
+    }
+  ],
+  "compra": []
 }

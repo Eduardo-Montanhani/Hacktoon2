@@ -3,7 +3,7 @@ import { FormEvent, useContext, useEffect, useState } from 'react'
 import Modal from 'react-modal'
 import { FormContainer } from './styles'
 import { RotaContext } from '../../contexts/rotaContext'
-import NumberFormat from 'react-number-format';
+
 
 interface PropsModal {
     modalVisible: boolean;
@@ -104,7 +104,7 @@ export function CustomModal(props: PropsModal) {
 
                 <input
                     type="text"
-                    placeholder='Origem - Destino'
+                    placeholder='Rota'
                     required
                     value={nome}
                     onChange={(event) => setNome(event.target.value)}

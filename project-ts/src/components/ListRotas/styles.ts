@@ -15,7 +15,7 @@ export const Container = styled.div`
         color: var(--blue-light);
         margin: 0 0 25px 0;
     }
-    
+
     ul {
         width: 30rem;
         border-radius: 8px;
@@ -51,6 +51,7 @@ export const Container = styled.div`
 
         button {
             margin: 5px;
+
         }
 
         .btn-editar{
