@@ -25,5 +25,5 @@ De que tecnologias e bibliotecas você precisará para instalar o software e com
 - Clone o projeto utilizando o comando **git clone "link do repositório"**
 - Ao abrir o projeto no VSCODE, entre na pasta **project-ts**, abra o terminal e rode o comando **npm install**
 - Em seguida, rode o comando **Set-ExecutionPolicy RemoteSigned -Scope Process** e **json-server --watch db.json**
-- Em um novo terminal iremos rodar os seguintes comandos para instalar as dependências: **npm install react-icons --save** / **npm install styled-components** / **npm install axios** / **npm install @types/react-modal** / **npm install react-modal**
+- Em um novo terminal iremos rodar os seguintes comandos para instalar as dependências:**npm install** / **npm install react-icons --save** / **npm install styled-components** / **npm install axios** / **npm install @types/react-modal** / **npm install react-modal**
 - Por último, rode o comando **npm run dev** ou **npm start** para rodarmos a aplicação
