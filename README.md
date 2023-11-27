@@ -14,7 +14,6 @@ De que tecnologias e bibliotecas você precisará para instalar o software e com
 - React (18.2.0)
 - Typescript
 - Json-Server
-- Java
 - Axios
 - Styled-components
 - Npm
@@ -27,3 +26,11 @@ De que tecnologias e bibliotecas você precisará para instalar o software e com
 - Em seguida, rode o comando **Set-ExecutionPolicy RemoteSigned -Scope Process** e **json-server --watch db.json**
 - Em um novo terminal iremos rodar os seguintes comandos para instalar as dependências:**npm install** / **npm install react-icons --save** / **npm install styled-components** / **npm install axios** / **npm install @types/react-modal** / **npm install react-modal**
 - Por último, rode o comando **npm run dev** ou **npm start** para rodarmos a aplicação
+
+📋 Pré-requisitos para a versão Mobile
+- Java
+- Android Studio - Giraffe
+
+  🔧 Instalação para a versão Mobile
+  - Abra a pasta do projeto utilizando o Android Studio
+  - Build o projeto
