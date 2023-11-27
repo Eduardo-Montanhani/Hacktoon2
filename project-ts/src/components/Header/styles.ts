@@ -19,9 +19,9 @@ export const Container = styled.header`
         color: #fff;
         background-color: var(--blue-light);
         border: 2px;
-        padding: 0 3rem;
+        padding: 0 1rem;
         margin: 2px;
-
+        flex: 1;
 
         border-radius: 8px;
         height: 3rem;
@@ -35,7 +35,6 @@ export const Container = styled.header`
         }
 
     }
-
 
     img {
         max-width:200px;

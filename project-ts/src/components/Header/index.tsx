@@ -10,7 +10,7 @@ export const Header = (props: PropsHeader) => {
         <Container>
             <img src="/logobus.png" alt="logo" />
 
-            <h1>SI BUS CONTROLLER</h1>
+            <h1>SI BUS</h1>
             <div>
                 <button
                     type="button"
