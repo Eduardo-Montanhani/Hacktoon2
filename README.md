@@ -14,6 +14,7 @@ De que tecnologias e bibliotecas você precisará para instalar o software e com
 - React (18.2.0)
 - Typescript
 - Json-Server
+- Docker
 - Axios
 - Styled-components
 - Npm
@@ -21,10 +22,11 @@ De que tecnologias e bibliotecas você precisará para instalar o software e com
 
 🔧 Instalação para a versão Web
 
+- Inicie o Docker
+
 - Clone o projeto utilizando o comando **git clone "link do repositório"**
 - Ao abrir o projeto no VSCODE, entre na pasta **project-ts**, abra o terminal e rode o comando **npm install**
-- Em seguida, rode o comando **Set-ExecutionPolicy RemoteSigned -Scope Process** e **json-server --watch db.json**
-- Em um novo terminal iremos rodar os seguintes comandos para instalar as dependências:**npm install** / **npm install react-icons --save** / **npm install styled-components** / **npm install axios** / **npm install @types/react-modal** / **npm install react-modal**
+- Em seguida rode os seguintes comandos para instalar as dependências:**npm install react-icons --save** / **npm install styled-components** / **npm install axios** / **npm install @types/react-modal** / **npm install react-modal** / **docker build -t jsonserver .** / **docker run jsonserver-container -p 3000:3000 jsonserver**
 - Por último, rode o comando **npm run dev** ou **npm start** para rodarmos a aplicação
 
 📋 Pré-requisitos para a versão Mobile
