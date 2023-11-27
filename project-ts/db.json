@@ -1,18 +1,18 @@
 {
   "rotas": [
     {
-      "nome": "1212",
-      "rotaInicial": "2121",
-      "rotaFinal": "121",
-      "horario": "12:21",
-      "preco": "22",
+      "nome": "Rota36",
+      "rotaInicial": "Altonia",
+      "rotaFinal": "umuarama",
+      "horario": "12:30",
+      "preco": "15.00",
       "id": 1
     }
   ],
   "usuario": [
     {
-      "nome": "eduardo",
-      "senha": "12345",
+      "nome": "wesley",
+      "senha": "123456",
       "id": 1
     }
   ]
